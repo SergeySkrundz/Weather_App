@@ -1,0 +1,239 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-image: url(../img/фон.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'),
+    url("../fonts/Montserrat-Regular.woff2") format('woff2'),
+    url("../fonts/Montserrat-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-SemiBold'),
+    url("../fonts/Montserrat-SemiBold.woff2") format('woff2'),
+    url("../fonts/Montserrat-SemiBold.woff") format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Bold'),
+    url("../fonts/Montserrat-Bold.woff2") format('woff2'),
+    url("../fonts/Montserrat-Bold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-ExtraBold'),
+    url("../fonts/Montserrat-ExtraBold.woff2") format('woff2'),
+    url("../fonts/Montserrat-ExtraBold.woff") format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+ 
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  color: var(--white);
+}
+
+
+/* glob */
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+/* form */
+
+.search{
+  position: relative;
+  padding-bottom: 10px;
+  filter: drop-shadow( 0px 4px 4px rgb(7, 7, 7) );
+}
+
+#location{
+  display: inline-block;
+  padding-left: 10px;
+  border: 2px solid rgb(85, 131, 0);
+  border-right: none;
+  width: 80%;
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-radius: 10px 0 0 10px;
+  background: rgba(255, 255, 255, .4);
+  color: var(--white);
+  outline: none;
+  font-size: 18px;
+}
+
+#location::placeholder{
+  color: rgba(255, 255, 255, .4);
+}
+
+#show{
+  display: inline-block;
+  position: absolute;
+  height: 40px;
+  width: 20%;
+  border-radius: 0 10px 10px 0;
+  background: rgb(85, 131, 0);
+  color: var(--white);
+  font-size: 15px;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px var(--black);
+}
+
+#show:hover{
+  background: rgb(120, 170, 0);
+  transition: background 0.3s ease-in-out;
+}
+
+#show:active{
+  background: rgb(85, 131, 0);
+}
+
+#place{
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  text-shadow: 5px 4px 7px var(--black);
+}
+
+#day{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 5px 4px 7px var(--black);
+}
+
+#date{
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 5px 4px 7px var(--black);
+}
+
+.row-temp{
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#temp{
+  
+  font-size: 100px;
+  font-weight: bold;
+  text-shadow: 5px 4px 7px var(--black);
+}
+
+.status-clouds{
+  text-shadow: 5px 3px 4px var(--black);
+  padding-bottom: 15px;
+}
+
+#wind{
+  background: url(../img/wind.png);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  font-size: 25px;
+  margin-left: 119px;
+  margin-bottom: 10px;
+  padding-left: 52px;
+  text-shadow: 1px 0px 1px var(--black);
+  filter: drop-shadow(1px 2px 3px var(--black));
+}
+
+#humidity{
+  background: url(../img/humidity.png);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  font-size: 25px;
+  margin-left: 110px;
+  margin-bottom: 15px;
+  padding-left: 60px;
+  text-shadow: 1px 0px 1px var(--black);
+  filter: drop-shadow(1px 2px 3px var(--black));
+}
+
+#barometric{
+  background: url(../img/barometric.png);
+  background-repeat: no-repeat;
+  background-size: 32px;
+  font-size: 25px;
+  margin-left: 114px;
+  margin-bottom: 13px;
+  padding-left: 55px;
+  text-shadow: 1px 0px 1px var(--black);
+  filter: drop-shadow(1px 2px 3px var(--black));
+}
+
+#rain{
+  background: url(../img/rain.png);
+  background-repeat: no-repeat;
+  background-size: 45px;
+  font-size: 25px;
+  margin-left: 112px;
+  margin-bottom: 10px;
+  padding-left: 60px;
+  text-shadow: 1px 0px 1px var(--black);
+  filter: drop-shadow(1px 2px 3px var(--black));
+}
+
+#distance{
+  padding-top: 15px;
+  font-size: 25px;
+  text-shadow: 1px 0px 1px var(--black);
+  filter: drop-shadow(1px 2px 3px var(--black));
+}
+
